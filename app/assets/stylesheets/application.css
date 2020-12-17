@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+body {
+  margin: 33px;
+}
+
+table, p, .link {
+  font-size: 13px;
+}
+
+th, td {
+  padding: 0px 5px 5px 5px;
+}
+
+#notice {
+  color: green;
+}
+
+.error-box {
+  background-color: #f5f5f5;
+  max-width: 400px;
+  border: 3px solid #ff1a40;
+  font-size: 12px;
+}
+
+.error-title {
+  background-color: red;
+  color: white;
+  font-weight: bolder;
+  max-width: 400px;
+  padding: 5px;
+  font-size: 12px;
+}

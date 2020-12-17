@@ -1,7 +1,8 @@
+<body>
 <p id="notice">
   <%= notice %>
 </p>
-<h1>Books</h1>
+<h2>Books</h2>
 
 <table>
   <thead>
@@ -34,17 +35,22 @@
 <%= form_with model: @book, url:'/books', local:true do |f| %>
 
   <% if @book.errors.any? %>
-    <%= @book.errors.count %>error prohibited this book from being saved:
+  <div class="error-box">
+    <div class="error-title">
+    <%= @book.errors.count %> error prohibited this book from being saved:
+    </div>
     <ul>
       <% @book.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
     </ul>
+  </div>
   <% end %>
 
-  <h4>Title</h4>
+  <p>Title</p>
   <%= f.text_field :title %>
-  <h4>Body</h4>
+  <p>Body</p>
   <%= f.text_area :body %><br>
   <%= f.submit 'Create Book' %>
 <% end %>
+</body>
